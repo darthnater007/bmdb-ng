@@ -1,0 +1,22 @@
+<h1 class="jumbotron">{{ title }}</h1>
+
+<table class="table table-striped table-lg table-dark" *ngIf='actors'>
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Gender</th>
+			<th>Birth Date</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor='let actor of actors'>
+			<td>{{ actor.Id }}</td>
+			<td>{{ actor.FirstName }}</td>
+			<td>{{ actor.LastName }}</td>
+			<td>{{ actor.Gender }}</td>
+			<td>{{ actor.BirthDate | date: "MM dd yyyy" }}</td>
+		</tr>
+	</tbody>
+</table>
